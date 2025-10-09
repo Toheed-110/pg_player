@@ -10,12 +10,12 @@
 <style>
     @media (max-width: 486px) {
         .side-banner {
-            font-size: 25px !important;
-            left: -180px !important;
+            font-size: 24px !important;
+            left: -178px !important;
         }
 
         .card {
-            padding-left: 0 !important;
+            padding-left: 15px !important;
         }
 
         .believe {
@@ -44,10 +44,10 @@
         }
 
         @media (max-width: 365px) {
-            
-        .grid-overlay {
-            height: 100px !important;
-        }
+
+            .grid-overlay {
+                height: 100px !important;
+            }
         }
     }
 </style>
@@ -56,8 +56,8 @@
     <div style="width: 500px; position: relative; padding-left: 60px; background-color: #fff;">
 
         <div class="side-banner"
-            style="position: absolute; left: -336px;bottom:60%; z-index: 100; background-color: #FFFFFF; transform: rotate(-90deg); font-size: 45px; font-family: Arial; color:#14233A;">
-            <img src="picture/pg-logo.png" width="30px" style="transform: rotate(90deg);"> OFFICIAL
+            style="position: absolute; left: -339px;bottom:55%; z-index: 100; background-color: #FFFFFF; transform: rotate(-90deg); font-size: 45px; font-family: Arial; color:#003764;">
+            <img src="picture/pg-logo.png" width="40px" style="transform: rotate(90deg);align-items: center;"> OFFICIAL
             <strong>INVITATIONAL</strong> OFFER
         </div>
 
@@ -67,7 +67,7 @@
             style="position: absolute; left: 0; bottom: 0; z-index: 50;">
 
         <div
-            style="display: flex; flex-direction: column; background-color: #E2E2E2;  clip-path: polygon(0 0, 100% 0, 100% 100%, 65px 100%, 0 calc(100% - 65px));">
+            style="display: flex; flex-direction: column; background-color: #E2E2E2;  clip-path: polygon(0 0, 100% 0, 100% 100%, 60px 100%, 0 calc(100% - 60px));">
             <div
                 style="background-image:url(picture/texture-bg.png); background-position: top; background-size: cover; position: relative; display: flex; justify-content: center; background-repeat: no-repeat;">
 
@@ -111,17 +111,22 @@
             </div>
 
             <div class="card"
-                style="padding-left: 30px; transform: translateY(0px); box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;; ">
-                <div style="position: relative;  box-shadow: 0px -25px 55px white; padding-bottom: 0px; clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
+                style="padding-left: 30px; padding-bottom:50px; translateY(0px); box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;; ">
+                <div style="position: relative;  box-shadow: 0px -25px 55px white; padding-bottom: 15px; clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
 
                     background-image: url('picture/texture-text.png');
                     background-position: center;
                     background-size: cover;
+                     /* smooth top fade-out */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat; 
                                     ">
 
 
                     <div class="content-pad"
-                        style="padding: 20px; position: relative; z-index: 20; font-family: Arial, Helvetica, sans-serif">
+                        style="padding: 20px; position: relative; z-index: 20; font-family: Arial; color:#132239;">
                         <p>Congratulations, Player!</p>
                         <p>You've done something extraordinary. You have proven you are among the best in your class,
                             and
@@ -138,7 +143,7 @@
                         <p>Accept your invitation and join the elite.</p>
                     </div>
                     <h2 class="believe"
-                        style="padding-left: 15px;position: relative; z-index: 20; color:#14233A; font-weight: bold; font-family: Arial; font-size: xx-large;margin: 0%;">
+                        style="padding-left: 15px;position: relative; z-index: 20; color:#132239; font-weight: bold; font-family:Countach Regular; font-size: xx-large;margin: 0%;">
                         BELIEVE!
                     </h2>
 
@@ -150,21 +155,23 @@
                     </div>
 
                     <div
-                        style="display: flex; justify-content: flex-end; align-items: center;  position: relative; z-index: 20; color:#14233A; padding-right: 10px;">
-                        <P>DOMINICK J. FERRARO<br>MANAGING PARTNER<br>PERFECT GAME (PGSEC)</P>
+                        style="display: flex; flex-direction: column; justify-content: flex-end; align-items: end; font-size: 11px; font-weight: bold; position: relative; z-index: 20; color:#14233A; padding-right: 10px;">
+                        <P style="margin: 0;">DOMINICK J. FERRARO</P>
+                            <p style="margin: 0;">MANAGING PARTNER</p>
+                            <p style="margin: 0;">PERFECT GAME (PGSEC)</P>
                     </div>
 
-                    <div style="display: flex; justify-content: flex-end;">
+                    <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
                         <div class="footer-stats"
-                            style="background-color: #003764; text-align: center;width: fit-content; padding-right: 10px; font-size: 11px;font-weight: bold;line-height: 18px;letter-spacing: 0px;">
+                            style="background-color: #003764; text-align: center;width: fit-content; padding-right: 15px;padding-left: 15px; font-size: 12px;font-weight: bold;line-height: 18px;letter-spacing: 0px;">
 
-                            <p style="margin: 0px;"><span style="color: yellow;">TOTAL ASG25 NOMINATIONS:</span> <span
-                                    style="color: white">30,000 |</span><span style="color: yellow"> ASG25 R2
-                                    INVITES:</span><span style="color: white"> 500</span></p>
-                            <p style="margin: 0px;"><span style="color: white">6</span> <span
-                                    style="color: yellow;">TOTAL
-                                    PARTICIPATING STATES</span> <span style="color: white">| 90,000</span> <span
-                                    style="color: yellow">PERFECT GAME PLAYERS</span></p>
+                            <p style="margin: 0px;"><span style="color: #FFD100;">TOTAL ASG25 NOMINATIONS:</span> <span
+                                    style="color: #FFFFFF">30,000 |</span><span style="color: #FFD100"> ASG25 R2
+                                    INVITES:</span><span style="color: #FFFFFF"> 500</span></p>
+                            <p style="margin: 0px;"><span style="color: #FFFFFF">6</span> <span
+                                    style="color: #FFD100;">TOTAL
+                                    PARTICIPATING STATES</span> <span style="color: #FFFFFF">| 90,000</span> <span
+                                    style="color: #FFD100">PERFECT GAME PLAYERS</span></p>
                         </div>
 
                     </div>
