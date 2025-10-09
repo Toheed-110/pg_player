@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PG Invite — responsive</title>
+
+  <style>
+    /* --- base --- */
+    html,body { height:100%; margin:0; padding:0; }
+    body {
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      background: #ffffff; /* keep it white if you want the exact look */
+      padding: 18px;
+      -webkit-font-smoothing:antialiased;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* wrapper keeps your 500px desktop layout but will shrink on mobile */
+    .wrapper {
+      width: 500px;
+      position: relative;
+      padding-left: 40px;
+      box-sizing: border-box;
+    }
+
+    /* rotated banner (kept visually identical but responsive) */
+    .side-banner {
+      position: absolute;
+      left: -71.2%;           /* 356 / 500 = 71.2% -> same horizontal offset as left:-356px */
+      bottom: 60%;
+      z-index: 100;
+      background-color: #fff;
+      transform: rotate(-90deg);
+      font-size: clamp(20px, 3.5vw, 45px); /* scales down on small screens */
+      color: #14233A;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 6px;
+    }
+    .side-banner img { width: 30px; transform: rotate(90deg); display:inline-block; }
+
+    /* corner images — proportions match original 120px/500px ≈ 24% */
+    .corner-img {
+      position: absolute;
+      z-index: 50;
+      width: 24%;
+      height: auto;
+    }
+    .corner-img.top-right { right: 0; top: 0; }
+    .corner-img.bottom-left { left: 0; bottom: 0; }
+
+    /* body content */
+    .content { display:flex; flex-direction:column; background-color: rgba(202,200,200,0.7); }
+
+    .texture-block {
+      background-image: url(picture/texture-bg.png);
+      background-position: top;
+      background-size: contain;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      overflow: visible;
+    }
+    /* original poster image (was 400px) -> 80% of wrapper */
+    .poster {
+      width: 80%;
+      transform: translateY(65px);
+      display:block;
+    }
+
+    .inner-wrap { padding-left: 30px; transform: translateY(-5px); }
+
+    /* main clipped card — uses percentage clip-path for scaling */
+    .card {
+      position: relative;
+      padding-bottom: 10px;
+      box-sizing: border-box;
+      /* clip-path: same shape as before but percentage-based so it scales */
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 17% 100%, 0 calc(100% - 17%));
+      background: #fff; /* important — gives the element something opaque to cast shadows */
+      /* inner glow (visible inside the clipped shape) */
+      box-shadow: inset 0 25px 55px rgba(255,255,255,0.92);
+      /* subtle outer glow fallback */
+      filter: drop-shadow(0 -20px 40px rgba(255,255,255,0.75));
+      overflow: visible;
+    }
+
+    .texture-text {
+      position: absolute;
+      max-width: 100%;
+      opacity: 0.18;
+      top: 0;
+      left: 0;
+      pointer-events:none;
+    }
+
+    .card .content-pad { padding: 20px; position: relative; z-index: 20; }
+
+    .card h2 {
+      padding-left: 15px;
+      position: relative;
+      z-index: 20;
+      color: #14233A;
+      font-weight: bolder;
+      font-size: xx-large;
+      margin: 0;
+    }
+
+    .signature { display:flex; justify-content:flex-end; align-items:center; position:relative; z-index:20; padding-right:10px; gap:10px; }
+    .signature img { width: 60%; max-width: 300px; height:auto; display:block; }
+    .sig-text { color:#14233A; text-align:right; position:relative; z-index:20; padding-right:10px; }
+
+    .stats {
+      background-color: #003764;
+      text-align: center;
+      width: fit-content;
+      position: relative;
+      z-index: 20;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 18px;
+      margin-left: auto;
+    }
+
+    /* --- responsive tweaks (mobile) --- */
+    @media (max-width: 600px) {
+      .wrapper { width: 92%; padding-left: 12px; }
+
+      /* move the rotated banner closer on small screens and shrink it */
+      .side-banner {
+        left: -60%;          /* less negative so it remains visible */
+        bottom: 52%;
+        font-size: clamp(14px, 5.5vw, 28px);
+        padding: 3px 6px;
+      }
+      .side-banner img { width: 20px; }
+
+      /* corner icons smaller */
+      .corner-img { width: 18%; }
+
+      .poster { width: 92%; transform: translateY(30px); }
+
+      /* make the clipped slice proportionally larger on narrow screens so it doesn't look too tight */
+      .card { 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 calc(100% - 25%));
+        box-shadow: inset 0 18px 40px rgba(255,255,255,0.95);
+        filter: drop-shadow(0 -12px 30px rgba(255,255,255,0.75));
+      }
+
+      .card .content-pad p { font-size: 14px; margin: 10px 0; }
+      .card h2 { font-size: 20px; }
+      .signature img { width: 80%; max-width: 220px; }
+      .stats { font-size: 10px; padding: 5px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- rotated banner: same content you had -->
+    <div class="side-banner">
+      <img src="picture/pg-logo.png" alt="logo"> OFFICIAL <strong>INVITATIONAL</strong> OFFER
+    </div>
+
+    <!-- corner images -->
+    <img src="picture/mvp-softball.png" alt="" class="corner-img top-right">
+    <img src="picture/pg-allstate.png" alt="" class="corner-img bottom-left">
+
+    <div class="content">
+      <div class="texture-block">
+        <img src="picture/uPZNKA.png" alt="" class="poster">
+      </div>
+
+      <div class="inner-wrap">
+        <div class="card">
+          <!-- background texture image -->
+          <img src="picture/texture-text.png" alt="" class="texture-text">
+
+          <div class="content-pad">
+            <p>Congratulations, Player!</p>
+            <p>You've done something extraordinary. You have proven you are among the best in your class, and now we are officially inviting you to compete in the prestigious PG All-State Games.</p>
+            <p>We are honored to officially extend this invitation to one of the most prestigious all-star events in the country.</p>
+            <p>This is your chance to compete against the top players in your class and represent your state.</p>
+            <p>Accept your invitation and join the elite.</p>
+          </div>
+
+          <h2>BELIEVE!</h2>
+
+          <div class="signature">
+            <img src="picture/dferraro.png" alt="signature">
+          </div>
+
+          <div class="sig-text">
+            <p style="margin:0;">DOMINICK J. FERRARO<br>MANAGING PARTNER<br>PERFECT GAME (PGSEC)</p>
+          </div>
+
+          <div class="stats">
+            <p style="margin:0;">
+              <span style="color: yellow;">TOTAL ASG25 NOMINATIONS:</span> <span style="color:white">30,000 |</span>
+              <span style="color: yellow;"> ASG25 R2 INVITES:</span> <span style="color:white">500</span>
+            </p>
+            <p style="margin:0;">
+              <span style="color:white">6</span> <span style="color: yellow;">TOTAL PARTICIPATING STATES</span>
+              <span style="color:white">| 90,000</span> <span style="color: yellow;">PERFECT GAME PLAYERS</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
