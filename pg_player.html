@@ -8,8 +8,6 @@
 </head>
 
 <style>
-
-
     @media (max-width: 486px) {
         .side-banner {
             font-size: 25px !important;
@@ -32,41 +30,54 @@
             margin-left: 55px !important;
         }
 
-        .signature-img{
+        .signature-img {
             height: 30px !important;
             width: 150px !important;
         }
 
+        .person-img {
+            transform: translateY(40px) !important;
+        }
 
+        .grid-overlay {
+            height: 80px !important;
+        }
+
+        @media (max-width: 365px) {
+            
+        .grid-overlay {
+            height: 30px !important;
+        }
+        }
     }
 </style>
 
 <body style="display: flex; justify-content: center; background-color: lightgray;font-family: Arial;">
-<div style="width: 500px; position: relative; padding-left: 60px; background-color: #fff;">
+    <div style="width: 500px; position: relative; padding-left: 60px; background-color: #fff;">
 
-    <div class="side-banner"
-         style="position: absolute; left: -336px;bottom:60%; z-index: 100; background-color: #FFFFFF; transform: rotate(-90deg); font-size: 45px; font-family: Arial; color:#14233A;">
-        <img src="picture/pg-logo.png" width="30px" style="transform: rotate(90deg);"> OFFICIAL
-        <strong>INVITATIONAL</strong> OFFER
-    </div>
+        <div class="side-banner"
+            style="position: absolute; left: -336px;bottom:60%; z-index: 100; background-color: #FFFFFF; transform: rotate(-90deg); font-size: 45px; font-family: Arial; color:#14233A;">
+            <img src="picture/pg-logo.png" width="30px" style="transform: rotate(90deg);"> OFFICIAL
+            <strong>INVITATIONAL</strong> OFFER
+        </div>
 
-    <img src="picture/mvp-softball.png" alt="" width="120px" height="120px"
-         style="position: absolute; right: 0; top: 0; z-index: 50;">
-    <img src="picture/pg-allstate.png" alt="" width="120px" height="120px"
-         style="position: absolute; left: 0; bottom: 0; z-index: 50;">
+        <img src="picture/mvp-softball.png" alt="" width="120px" height="120px"
+            style="position: absolute; right: 0; top: 0; z-index: 50;">
+        <img src="picture/pg-allstate.png" alt="" width="120px" height="120px"
+            style="position: absolute; left: 0; bottom: 0; z-index: 50;">
 
-    <div
-            style="display: flex; flex-direction: column; background-color: #E2E2E2;  clip-path: polygon(0 0, 100% 0, 100% 100%, 65px 100%, 0 calc(100% - 65px));">
         <div
+            style="display: flex; flex-direction: column; background-color: #E2E2E2;  clip-path: polygon(0 0, 100% 0, 100% 100%, 65px 100%, 0 calc(100% - 65px));">
+            <div
                 style="background-image:url(picture/texture-bg.png); background-position: top; background-size: cover; position: relative; display: flex; justify-content: center; background-repeat: no-repeat;">
 
-            <div
+                <div
                     style="position: absolute; inset: 0; box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181); ">
-            </div>
-            <img src="picture/avatar-removebg-preview.png" alt=""
-                 style="display: flex; justify-content: center;transform: translateY(65px); width: 100%; max-width: 400px; height: auto;">
+                </div>
+                <img src="picture/avatar-removebg-preview.png" alt="" class="person-img"
+                    style="display: flex; justify-content: center;transform: translateY(65px); width: 100%; max-width: 400px; height: auto;">
 
-            <div style="
+                <div class="grid-overlay" style="
     position: absolute;
     z-index: 200;
     bottom: 0;
@@ -97,11 +108,11 @@
     mask-size: 100% 100%;
   "></div>
 
-        </div>
+            </div>
 
-        <div class="card"
-             style="padding-left: 30px; transform: translateY(0px); box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;; ">
-            <div style="position: relative;  box-shadow: 0px -25px 55px white; padding-bottom: 0px; clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
+            <div class="card"
+                style="padding-left: 30px; transform: translateY(0px); box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;; ">
+                <div style="position: relative;  box-shadow: 0px -25px 55px white; padding-bottom: 0px; clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
 
                     background-image: url('picture/texture-text.png');
                     background-position: center;
@@ -109,59 +120,61 @@
                                     ">
 
 
-                <div class="content-pad"
-                     style="padding: 20px; position: relative; z-index: 20; font-family: Arial, Helvetica, sans-serif">
-                    <p>Congratulations, Player!</p>
-                    <p>You've done something extraordinary. You have proven you are among the best in your class,
-                        and
-                        now we
-                        are
-                        officially inviting you to compete in the prestigious PG All-State Games.</p>
-                    <p>We are honored to officially extend this invitation to, one of the most prestigious all-star
-                        events
-                        in
-                        the country.</p>
-                    <p>This is your chance to compete against the top players in your class and represent your
-                        state.
-                    </p>
-                    <p>Accept your invitation and join the elite.</p>
-                </div>
-                <h2 class="believe"
-                    style="padding-left: 15px;position: relative; z-index: 20; color:#14233A; font-weight: bold; font-family: Arial; font-size: xx-large;margin: 0%;">
-                    BELIEVE!
-                </h2>
+                    <div class="content-pad"
+                        style="padding: 20px; position: relative; z-index: 20; font-family: Arial, Helvetica, sans-serif">
+                        <p>Congratulations, Player!</p>
+                        <p>You've done something extraordinary. You have proven you are among the best in your class,
+                            and
+                            now we
+                            are
+                            officially inviting you to compete in the prestigious PG All-State Games.</p>
+                        <p>We are honored to officially extend this invitation to, one of the most prestigious all-star
+                            events
+                            in
+                            the country.</p>
+                        <p>This is your chance to compete against the top players in your class and represent your
+                            state.
+                        </p>
+                        <p>Accept your invitation and join the elite.</p>
+                    </div>
+                    <h2 class="believe"
+                        style="padding-left: 15px;position: relative; z-index: 20; color:#14233A; font-weight: bold; font-family: Arial; font-size: xx-large;margin: 0%;">
+                        BELIEVE!
+                    </h2>
 
 
-                <div
+                    <div
                         style="display: flex; justify-content: flex-end; align-items: center; position: relative; z-index: 20; padding-right: 10px;">
-                    <img src="picture/dferraro.png" alt="" style="width: 100%; max-width: 250px; height: auto;" class="signature-img">
-                </div>
-
-                <div
-                        style="display: flex; justify-content: flex-end; align-items: center;  position: relative; z-index: 20; color:#14233A; padding-right: 10px;">
-                    <P>DOMINICK J. FERRARO<br>MANAGING PARTNER<br>PERFECT GAME (PGSEC)</P>
-                </div>
-
-                <div style="display: flex; justify-content: flex-end;">
-                    <div class="footer-stats"
-                         style="background-color: #003764; text-align: center;width: fit-content; padding-right: 10px; font-size: 11px;font-weight: bold;line-height: 18px;letter-spacing: 0px;">
-
-                        <p style="margin: 0px;"><span style="color: yellow;">TOTAL ASG25 NOMINATIONS:</span> <span
-                                style="color: white">30,000 |</span><span style="color: yellow"> ASG25 R2
-                                INVITES:</span><span style="color: white"> 500</span></p>
-                        <p style="margin: 0px;"><span style="color: white">6</span> <span style="color: yellow;">TOTAL
-                                PARTICIPATING STATES</span> <span style="color: white">| 90,000</span> <span
-                                style="color: yellow">PERFECT GAME PLAYERS</span></p>
+                        <img src="picture/dferraro.png" alt="" style="width: 100%; max-width: 250px; height: auto;"
+                            class="signature-img">
                     </div>
 
+                    <div
+                        style="display: flex; justify-content: flex-end; align-items: center;  position: relative; z-index: 20; color:#14233A; padding-right: 10px;">
+                        <P>DOMINICK J. FERRARO<br>MANAGING PARTNER<br>PERFECT GAME (PGSEC)</P>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end;">
+                        <div class="footer-stats"
+                            style="background-color: #003764; text-align: center;width: fit-content; padding-right: 10px; font-size: 11px;font-weight: bold;line-height: 18px;letter-spacing: 0px;">
+
+                            <p style="margin: 0px;"><span style="color: yellow;">TOTAL ASG25 NOMINATIONS:</span> <span
+                                    style="color: white">30,000 |</span><span style="color: yellow"> ASG25 R2
+                                    INVITES:</span><span style="color: white"> 500</span></p>
+                            <p style="margin: 0px;"><span style="color: white">6</span> <span
+                                    style="color: yellow;">TOTAL
+                                    PARTICIPATING STATES</span> <span style="color: white">| 90,000</span> <span
+                                    style="color: yellow">PERFECT GAME PLAYERS</span></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
 
+
     </div>
-
-
-</div>
 </body>
 
 </html>
