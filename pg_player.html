@@ -9,7 +9,122 @@
 
 <style>
     @import url('https://db.onlinewebfonts.com/c/518a5b02a5198232adbb0ff63ac2d8bb?family=CountachWeb+Regular');
-    @import url('https://db.onlinewebfonts.com/c/ef6b8f9fa62d96b2f6b198e36a58d94e?family=Agency+FB');
+    @import url('https://fonts.cdnfonts.com/css/agency-fb');
+
+
+    .main-container{
+        width: 500px;
+         position: relative; 
+         padding-left: 70px; 
+         background-color: #fff;
+
+    }
+
+    .side-banner{
+        position: absolute; 
+        left: -300px;
+        bottom:55%; 
+        z-index: 100;
+        display: flex;
+        column-gap: 20px; 
+        justify-items: center; 
+        background-color: #FFFFFF; 
+        transform: rotate(-90deg); 
+        font-size: 40px; 
+        font-family: Arial; 
+        color:#003764;
+
+    }
+
+    .person-img{
+        display: flex; 
+        justify-content: center;
+        transform: translateY(65px); 
+        width: 100%; 
+        max-width: 400px; 
+        height: auto;
+
+    }
+
+    .grid-overlay{
+       position: absolute;
+    z-index: 200;
+    bottom: -60px;
+    left: 5%;
+    width: 90%;
+    height: 120px;
+
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 12px 12px;
+
+    /* Combine fades — side + vertical */
+    -webkit-mask-image:
+      radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%),
+      linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-image:
+      radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%),
+      linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100% 100%;
+    }
+
+    .card{
+        padding-left: 30px; 
+        padding-bottom:50px;
+        transform: translateY(0); 
+        box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;
+    }
+
+    .card-item{
+        position: relative;  
+        box-shadow: 0px -25px 55px white; 
+        padding-bottom: 15px; 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
+
+        background-image: url('picture/texture-text.png');
+        background-position: center;
+        background-size: cover;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat; 
+
+    }
+
+    .believe{
+        padding-left: 15px;
+        position: relative; 
+        z-index: 20; 
+        color:#132239; 
+        font-weight:bold; 
+        font-family: 'CountachWeb Regular'; 
+        font-size:40px;
+        margin: 0%;
+
+    }
+
+    .footer-stats{
+        background-color: #003764; 
+        text-align: center;
+        width: fit-content; 
+        padding-right: 15px;
+        padding-left: 15px;
+        font-family: 'Agency FB', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: 0px;
+
+    }
 
     @media (max-width: 486px) {
         .main-container{
@@ -63,10 +178,9 @@
 </style>
 
 <body style="display: flex; justify-content: center; background-color: lightgray;">
-    <div class="main-container" style="width: 500px; position: relative; padding-left: 70px; background-color: #fff;">
+    <div class="main-container">
 
-        <div class="side-banner"
-            style="position: absolute; left: -300px;bottom:55%; z-index: 100;display: flex;column-gap: 20px; justify-items: center; background-color: #FFFFFF; transform: rotate(-90deg); font-size: 40px; font-family: Arial; color:#003764;">
+        <div class="side-banner">
             <img src="picture/pg-logo.png" width="45px" style="transform: rotate(90deg);">
             <span>
                 OFFICIAL
@@ -88,54 +202,14 @@
                     style="position: absolute; inset: 0; box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181); ">
                 </div>
                 <img src="picture/avatar-removebg-preview.png" alt="" class="person-img"
-                    style="display: flex; justify-content: center;transform: translateY(65px); width: 100%; max-width: 400px; height: auto;">
+                    style="">
 
-                <div class="grid-overlay" style="
-    position: absolute;
-    z-index: 200;
-    bottom: -60px;
-    left: 5%;
-    width: 90%;
-    height: 120px;
-
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.3) 1px, transparent 1px);
-    background-size: 12px 12px;
-
-    /* Combine fades — side + vertical */
-    -webkit-mask-image:
-      radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%),
-      linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    -webkit-mask-composite: intersect;
-    mask-image:
-      radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%),
-      linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    mask-composite: intersect;
-
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100% 100%;
-  "></div>
+                <div class="grid-overlay"></div>
 
             </div>
 
-            <div class="card"
-                style="padding-left: 30px; padding-bottom:50px; translateY(0px); box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181),inset 0 -15px 35px white;; ">
-                <div style="position: relative;  box-shadow: 0px -25px 55px white; padding-bottom: 15px; clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
-
-                    background-image: url('picture/texture-text.png');
-                    background-position: center;
-                    background-size: cover;
-                     /* smooth top fade-out */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat; 
-                                    ">
+            <div class="card">
+                <div class="card-item">
 
 
                     <div class="content-pad"
@@ -155,8 +229,7 @@
                         </p>
                         <p>Accept your invitation and join the elite.</p>
                     </div>
-                    <h2 class="believe"
-                        style="padding-left: 15px;position: relative; z-index: 20; color:#132239; font-weight:bold; font-family: 'CountachWeb Regular'; font-size:40px; margin: 0%;">
+                    <h2 class="believe">
                         BELIEVE!
                     </h2>
 
@@ -175,8 +248,7 @@
                     </div>
 
                     <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
-                        <div class="footer-stats"
-                            style="background-color: #003764; text-align: center;width: fit-content; padding-right: 15px;padding-left: 15px;font-family: 'Agency FB', sans-serif; font-size: 12px;font-weight: bold;line-height: 20px;letter-spacing: 0px;">
+                        <div class="footer-stats">
 
                             <p style="margin: 0px;"><span style="color: #FFD100;">TOTAL ASG25 NOMINATIONS:</span> <span
                                     style="color: #FFFFFF">30,000 |</span><span style="color: #FFD100"> ASG25 R2
