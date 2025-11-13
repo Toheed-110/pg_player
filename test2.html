@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG Invitational Preview</title>
+  <style>
+    @import url('https://db.onlinewebfonts.com/c/518a5b02a5198232adbb0ff63ac2d8bb?family=CountachWeb+Regular');
+    @import url('https://fonts.cdnfonts.com/css/agency-fb');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightgray;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .main-container {
+      width: 600px;
+      position: relative;
+      background-color: #fff;
+    }
+
+    .side-banner {
+      position: absolute;
+      left: -356px;
+      bottom: 58%;
+      z-index: 100;
+      display: flex;
+      column-gap: 20px;
+      justify-items: center;
+      transform: rotate(-90deg);
+      font-size: 47px;
+      font-family: Arial;
+      color: #003764;
+    }
+
+    .person-img {
+      display: flex;
+      justify-content: center;
+      transform: translateY(65px);
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      z-index: 200;
+      bottom: -60px;
+      left: 5%;
+      width: 90%;
+      height: 120px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+      background-size: 12px 12px;
+      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+      -webkit-mask-composite: intersect;
+      mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+    }
+
+    .card {
+      padding-left: 30px;
+      padding-bottom: 50px;
+      transform: translateY(0);
+      box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181),
+        inset -25px 0 25px rgba(0, 0, 0, 0.181),
+        inset 0 -15px 35px white;
+    }
+
+    .card-item {
+      position: relative;
+      box-shadow: 0px -25px 55px white;
+      padding-bottom: 15px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
+      background-image: url('picture/texture-text.png');
+      background-position: center;
+      background-size: cover;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 100%);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+
+    .believe {
+      padding-left: 15px;
+      position: relative;
+      z-index: 20;
+      color: #132239;
+      font-weight: bold;
+      font-family: 'CountachWeb Regular';
+      font-size: 40px;
+      margin: 0%;
+    }
+
+    .footer-stats {
+      background-color: #003764;
+      text-align: center;
+      width: fit-content;
+      padding-right: 15px;
+      padding-left: 15px;
+      font-family: 'Agency FB', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+    @media (max-width: 420px) {
+      .side-banner {
+        font-size: 32px;
+        left: -243px;
+      }
+
+      .side-banner img {
+        width: 25px;
+      }
+
+      .believe {
+        font-size: 20px;
+      }
+
+      .person-img {
+        max-width: 180px;
+        transform: translateY(30px);
+      }
+
+      .card {
+        padding-left: 10px;
+        padding-bottom: 20px;
+      }
+
+      .footer-stats {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table class="main-container" role="presentation" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <!-- Side banner column -->
+      <td width="12%" valign="top">
+        <div class="side-banner">
+          <img src="picture/pg-logo.png" width="45px" style="transform: rotate(90deg);">
+          <span>
+            OFFICIAL
+            <strong>INVITATIONAL</strong> OFFER
+          </span>
+        </div>
+      </td>
+
+      <!-- Main content column -->
+      <td width="88%" valign="top" style="position:relative;">
+
+        <!-- Absolute logos -->
+        <img src="picture/mvp-softball.png" alt="" width="120px" height="120px"
+          style="position:absolute; right:0; top:0; z-index:50;">
+        <img src="picture/pg-allstate.png" alt="" width="120px" height="120px"
+          style="position:absolute; left: -72px;; bottom:0; z-index:50;">
+
+        <!-- Outer gray section -->
+        <div
+          style="display: flex; flex-direction: column; background-color: #E2E2E2; clip-path: polygon(0 0, 100% 0, 100% 100%, 48px 100%, 0 calc(100% - 48px));">
+          <div
+            style="background-image:url(picture/texture-bg.png); background-position: top; background-size: cover; position: relative; display: flex; justify-content: center; background-repeat: no-repeat;">
+            <div
+              style="position: absolute; inset: 0; box-shadow: inset 25px 0 25px rgba(0, 0, 0, 0.181), inset -25px 0 25px rgba(0, 0, 0, 0.181);">
+            </div>
+            <img src="picture/avatar-removebg-preview.png" alt="" class="person-img">
+            <div class="grid-overlay"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-item">
+              <div class="content-pad"
+                style="padding:20px 20px 0 20px; position: relative; z-index:20; font-family: Arial; font-size:14px; color:#132239;">
+                <p>Congratulations, Player!</p>
+                <p>You've done something extraordinary. You have proven you are among the best in your class, and now
+                  we are officially inviting you to compete in the prestigious PG All-State Games.</p>
+                <p>We are honored to officially extend this invitation to, one of the most prestigious all-star events in
+                  the country.</p>
+                <p>This is your chance to compete against the top players in your class and represent your state.</p>
+                <p>Accept your invitation and join the elite.</p>
+              </div>
+
+              <h2 class="believe">BELIEVE!</h2>
+
+              <div
+                style="display:flex; justify-content:flex-end; align-items:center; position: relative; z-index:20; padding-right:10px;">
+                <img src="picture/dferraro.png" alt="" style="width:100%; max-width:250px; height:auto;" class="signature-img">
+              </div>
+
+              <div
+                style="display:flex; flex-direction:column; justify-content:flex-end; align-items:end; font-family:'CountachWeb Regular', sans-serif; font-size:16px; font-weight:400; position:relative; z-index:20; color:#14233A; padding-right:10px;">
+                <p style="margin:0;">DOMINICK J. FERRARO</p>
+                <p style="margin:0;">MANAGING PARTNER</p>
+                <p style="margin:0;">PERFECT GAME (PGSEC)</p>
+              </div>
+
+              <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+                <div class="footer-stats">
+                  <p style="margin:0;"><span style="color:#FFD100;">TOTAL ASG25 NOMINATIONS:</span> <span
+                      style="color:#FFFFFF">30,000 |</span><span style="color:#FFD100"> ASG25 R2 INVITES:</span><span
+                      style="color:#FFFFFF"> 500</span></p>
+                  <p style="margin:0;"><span style="color:#FFFFFF">6</span> <span style="color:#FFD100;">TOTAL
+                      PARTICIPATING STATES</span> <span style="color:#FFFFFF">| 90,000</span> <span
+                      style="color:#FFD100">PERFECT GAME PLAYERS</span></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
